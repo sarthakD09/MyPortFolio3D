@@ -1,19 +1,19 @@
+
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Sphere, MeshDistortMaterial, Float } from "@react-three/drei";
+import { OrbitControls, Float } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const AnimatedSphere = () => {
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <Sphere args={[1, 100, 200]} scale={2.4}>
-        <MeshDistortMaterial
+      <mesh scale={2.4}>
+        <sphereGeometry args={[1, 100, 200]} />
+        <meshStandardMaterial
           color="#3b82f6"
-          distort={0.3}
-          speed={1.5}
           roughness={0}
         />
-      </Sphere>
+      </mesh>
     </Float>
   );
 };

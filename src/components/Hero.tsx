@@ -1,4 +1,3 @@
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial, Float } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,6 @@ const AnimatedSphere = () => {
       <Sphere args={[1, 100, 200]} scale={2.4}>
         <MeshDistortMaterial
           color="#3b82f6"
-          attach="material"
           distort={0.3}
           speed={1.5}
           roughness={0}

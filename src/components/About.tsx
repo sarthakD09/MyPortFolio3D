@@ -1,14 +1,15 @@
 
 import { Canvas } from "@react-three/fiber";
-import { Box, Float } from "@react-three/drei";
+import { Float } from "@react-three/drei";
 import { useEffect, useState } from "react";
 
 const FloatingBox = ({ position, color }: { position: [number, number, number], color: string }) => {
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <Box position={position} args={[1, 1, 1]}>
+      <mesh position={position}>
+        <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color={color} />
-      </Box>
+      </mesh>
     </Float>
   );
 };

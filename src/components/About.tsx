@@ -51,26 +51,26 @@ export const About = () => {
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-purple-500 rounded-full"></div>
             </div>
             
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed w-full">
               <p>
-                I'm a passionate full-stack developer with over 5 years of experience 
-                creating innovative digital solutions. My expertise spans modern web 
-                technologies, 3D graphics, and interactive user experiences.
+                I’m an Electronics Engineering student with a passion for software development. I love building things — whether it’s a chat app, automation tool, or a website like this one.
               </p>
               <p>
-                I believe in the power of clean code, beautiful design, and 
-                meaningful user interactions. Every project is an opportunity 
-                to push boundaries and create something extraordinary.
+                Currently exploring web development, Flutter, and AI projects <br />
+Enjoy solving real-world problems through code
+Inspired by clean UI/UX, secure systems, and open-source contributions. <br />
+Outside coding, I enjoy chess, anime, and automating small life tasks just for fun.
+
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-3xl font-bold text-primary">50+</h3>
+                <h3 className="text-3xl font-bold text-primary">10+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </div>
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-3xl font-bold text-primary">5+</h3>
+                <h3 className="text-3xl font-bold text-primary">2+</h3>
                 <p className="text-muted-foreground">Years Experience</p>
               </div>
             </div>

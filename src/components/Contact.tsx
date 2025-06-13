@@ -37,10 +37,14 @@ export const Contact = () => {
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Message sent successfully! I'll get back to you soon.");
+  e.preventDefault();
+  
+  if (confirm("Ready to send? We'll open your email client to complete the message.")) {
+    const body = `${formData.message}\n\n---\nFrom: ${formData.name}\nEmail: ${formData.email}`;
+    window.location.href = `mailto:sarthakdatir22@gmail.com?subject=Message from ${formData.name}&body=${encodeURIComponent(body)}`;
     setFormData({ name: "", email: "", message: "" });
-  };
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -50,7 +54,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-20 relative ">
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-16 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
@@ -104,7 +108,7 @@ export const Contact = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground neon-glow"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground neon-glow" onClick={handleSubmit}
                   >
                     Send Message
                   </Button>
@@ -118,9 +122,9 @@ export const Contact = () => {
               <Card className="glass-card p-6">
                 <h3 className="text-xl font-bold mb-4 text-primary">Quick Contact</h3>
                 <div className="space-y-3 text-muted-foreground">
-                  <p>📧 hello@portfolio.dev</p>
-                  <p>📱 +1 (555) 123-4567</p>
-                  <p>📍 San Francisco, CA</p>
+                  <p>📧 sarthakdatir22@gmail.com</p>
+                  <p>📱 +91 7972722699</p>
+                  <p>📍 Amravati, Maharashtra</p>
                 </div>
               </Card>
 
@@ -128,19 +132,11 @@ export const Contact = () => {
                 <h3 className="text-xl font-bold mb-4 text-primary">Let's Connect</h3>
                 <div className="space-y-3">
                   <div className="flex gap-4">
-                    <Button variant="outline" className="flex-1 border-primary/50 text-primary hover:bg-primary/10">
+                    <Button variant="outline" className="flex-1 border-primary/50 text-primary hover:bg-primary/10" onClick={()=> window.open("https://www.linkedin.com/in/sarthak-datir-126407265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")}>
                       LinkedIn
                     </Button>
-                    <Button variant="outline" className="flex-1 border-primary/50 text-primary hover:bg-primary/10">
+                    <Button variant="outline" className="flex-1 border-primary/50 text-primary hover:bg-primary/10" onClick={()=> window.open("https://github.com/sarthakD09")}>
                       GitHub
-                    </Button>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button variant="outline" className="flex-1 border-primary/50 text-primary hover:bg-primary/10">
-                      Twitter
-                    </Button>
-                    <Button variant="outline" className="flex-1 border-primary/50 text-primary hover:bg-primary/10">
-                      Dribbble
                     </Button>
                   </div>
                 </div>
@@ -159,7 +155,7 @@ export const Contact = () => {
 
         <div className="text-center mt-16 pt-8 border-t border-border">
           <p className="text-muted-foreground">
-            © 2024 Portfolio. Crafted with ❤️ using React, Three.js & Tailwind CSS
+            © 2025 Portfolio by Sarthak
           </p>
         </div>
       </div>

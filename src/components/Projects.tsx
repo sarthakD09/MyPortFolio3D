@@ -6,36 +6,44 @@ import { useEffect, useState } from "react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce solution with real-time inventory management and AI-powered recommendations.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    demoUrl: "#",
-    codeUrl: "#",
+    title: "Witty-Chat-App",
+    description: "WittyChat is a real-time chat application built with React, Vite, and Firebase, offering secure messaging, image sharing, and instant updates.",
+    image: "/witty_chat.png",
+    technologies: ["React", "Node.js", "firebase","Zustand"],
+    demoUrl: "https://novion-schat.web.app/",
+    codeUrl: "https://github.com/sarthakD09/WittyChat.git",
   },
   {
     title: "3D Portfolio Website",
     description: "Interactive portfolio featuring Three.js animations and immersive 3D experiences.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Three.js", "WebGL", "GSAP"],
+    image: "/3d_portfolio.png",
+    technologies: ["Vite", "React", "Three.js", "TypeScript", "GSAP", "tailwindcss"],
     demoUrl: "#",
     codeUrl: "#",
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat application with AI-powered responses and sentiment analysis.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Socket.io", "OpenAI", "Express"],
-    demoUrl: "#",
-    codeUrl: "#",
+    title: "Self balancing robot",
+    description: "A self-balancing robot is a two-wheeled, motorized robotic system designed to maintain its upright position autonomously using real-time feedback and control algorithms. This project was an application of embedded systems, control theory, and sensor integration.",
+    image: "/self_balancing_robot.jpeg",
+    technologies: ["PID_Control", "Arduino_Uno", "Motor_Driver (L298N)", "MPU6050 (Gyroscope & Accelerometer)", "DC_Motor_with_Encoder"],
+    demoUrl: "https://youtu.be/pbJbpHjC3v0?si=WAY5c4774hRo4UHU",
+    codeUrl: "https://github.com/sarthakD09/Self_Balancing_Robot-Complete-Project-.git",
   },
   {
-    title: "Data Visualization Dashboard",
-    description: "Interactive dashboard for complex data analysis with real-time updates and beautiful charts.",
-    image: "/placeholder.svg",
-    technologies: ["React", "D3.js", "Node.js", "PostgreSQL"],
-    demoUrl: "#",
-    codeUrl: "#",
+    title: "Simon Memory Game",
+    description: "A web-based memory game inspired by the classic Simon Game, where the player must remember and repeat a growing sequence of color flashes and sounds. Each round adds one new color to the sequence, increasing difficulty and testing the player's memory.",
+    image: "/simon_game.png",
+    technologies: ["html", "css", "javascript"],
+    demoUrl: "https://sarthakd09.github.io/Simon_GAME/",
+    codeUrl: "https://github.com/sarthakD09/Simon_GAME.git",
+  },
+  {
+    title: "Tarot_Readings",
+    description: "A creative and interactive web-based Tarot card reading tool designed to simulate traditional card draws and provide symbolic interpretations for users. This project blends web development with basic storytelling and randomization logic.",
+    image: "/tarot.png",
+    technologies: ["html", "css", "javascript"],
+    demoUrl: "https://sarthakd09.github.io/TaroT/",
+    codeUrl: "https://github.com/sarthakD09/TaroT.git",
   },
 ];
 
@@ -94,10 +102,21 @@ export const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <div className="flex gap-2">
-                    <Button size="sm" className="bg-primary hover:bg-primary/90">
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90"
+                      onClick={() => window.open(project.demoUrl, "_blank")}
+                      disabled={project.demoUrl === "#"}
+                    >
                       Live Demo
                     </Button>
-                    <Button size="sm" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-primary/50 text-primary hover:bg-primary/10"
+                      onClick={() => window.open(project.codeUrl, "_blank")}
+                      disabled={project.codeUrl === "#"}
+                    >
                       View Code
                     </Button>
                   </div>

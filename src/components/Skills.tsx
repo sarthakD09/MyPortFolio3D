@@ -3,20 +3,21 @@ import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 
 const skills = [
-  { name: "React/Next.js", level: 95, color: "bg-blue-500" },
-  { name: "TypeScript", level: 90, color: "bg-blue-400" },
+  { name: "React/Next.js", level: 70, color: "bg-blue-500" },
+  { name: "TypeScript/javascript", level: 80, color: "bg-blue-400" },
   { name: "Node.js", level: 88, color: "bg-green-500" },
-  { name: "Three.js/WebGL", level: 85, color: "bg-purple-500" },
+  { name: "Three.js/WebGL", level: 40, color: "bg-purple-500" },
   { name: "Python", level: 82, color: "bg-yellow-500" },
-  { name: "Database Design", level: 87, color: "bg-red-500" },
+  { name: "Java", level: 87, color: "bg-red-500" },
   { name: "UI/UX Design", level: 80, color: "bg-pink-500" },
-  { name: "DevOps/AWS", level: 75, color: "bg-orange-500" },
+  { name: "web-dev/hosting", level: 75, color: "bg-orange-500" },
 ];
 
 const technologies = [
-  "React", "TypeScript", "Node.js", "Python", "Three.js", "WebGL",
-  "MongoDB", "PostgreSQL", "AWS", "Docker", "GraphQL", "REST APIs",
-  "Git", "Figma", "Tailwind CSS", "Next.js", "Express.js", "Socket.io"
+  "React", "TypeScript", "Node.js", "Python", "Three.js", "MySQL",
+  "MongoDB", "PostgreSQL", "AWS", "Docker", "Tableau/PowerBI", "REST APIs",
+  "Git/Github", "Figma", "Tailwind CSS", "Next.js", "Express.js", "Postman",
+  "Davinchi Resolve", "Blender", "Notion", "N8n", "Vsc","ArduinoIDE"
 ];
 
 export const Skills = () => {

@@ -1,5 +1,19 @@
 import tailwindcssAnimate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
+const config: Config = {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      screens: {
+        'max-xs': { raw: '(max-width: 480px)' }, // ✅ Custom screen for ≤ 480px
+      },
+    },
+  },
+  plugins: [],
+};
 
 export default {
 	darkMode: ["class"],

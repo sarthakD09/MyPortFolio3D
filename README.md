@@ -2,11 +2,9 @@
 
 Welcome to the source code for my personal portfolio website — a modern, interactive, and responsive space to showcase my skills, projects, and passion for building meaningful digital experiences.
 
-![Hero Screenshot](./screenshot.png) <!-- Optional: Add a screenshot of your site -->
-
 ## 🚀 Features
 
-- ⚡ **Hero Section** with animated 3D sphere and dynamic text using `react-three-fiber`, `gsap`, and `drei`.
+- ⚡ **Hero Section** with animated 3D sphere and dynamic text using `react-three-fiber`, `gsap`.
 - 🎨 **Scrambled & Blurred Text Effects** to creatively present my developer journey.
 - 📱 **Fully Responsive Design** – built with Tailwind CSS and optimized for all devices.
 - 🖱️ **Smooth Scrolling & Transitions** – enhancing the user experience.

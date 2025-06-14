@@ -33,7 +33,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen mt-auto flex items-center justify-center relative pt-0"
+      className="min-h-screen mt-auto flex items-center justify-center relative pt-0 max-xs:mt-10px "
     >
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
         {/* LEFT SIDE */}

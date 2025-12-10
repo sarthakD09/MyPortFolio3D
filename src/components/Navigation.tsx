@@ -46,21 +46,21 @@ export const Navigation = () => {
 
   return (
   <nav
-    className={`lg:fixed xl:fixed 2xl:fixed top-0 left-0 right-0 z-50 mx-auto transition-all duration-300 h-16 md:mb-10  ${
+    className={`lg:fixed xl:fixed 2xl:fixed top-0 left-0 right-0 z-50 mx-auto transition-all duration-300 h-16 md:mb-10    ${
       isScrolled
         ? "glass-card backdrop-blur-lg border-b border-white/10"
         : "bg-transparent"
     }`}
   >
-    <div className="max-w-7xl mx-auto px-6 py-4">
+    <div className="max-w-7xl mx-auto px-6 py-4 ">
       <div className="flex items-center justify-between">
         {/* Branding */}
-        <a href="#home" className="text-lg sm:text-3xl font-semibold text-white w-fit flex items-center">
+        <a href="#home" className="text-lg sm:text-xl font-semibold text-white w-fit flex items-center">
           <TrueFocus
-            sentence="Typed & True"
-            manualMode={false}
-            blurAmount={5}
-            borderColor="red"
+            sentence="Explore My Work"
+            manualMode={true}
+            blurAmount={3}
+            borderColor="grey"
             animationDuration={2}
             pauseBetweenAnimations={1}
           />
@@ -86,7 +86,7 @@ export const Navigation = () => {
         {/* Call to Action */}
         <Button
           onClick={() => scrollToSection("#contact")}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground neon-glow"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground "
         >
           Let's Talk
         </Button>

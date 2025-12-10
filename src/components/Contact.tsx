@@ -5,7 +5,22 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import LogoLoop from './LogoLoop';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 
+const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+];
+
+// Alternative with image sources
+const imageLogos = [
+  { src: "/logos/company1.png", alt: "Company 1", href: "https://company1.com" },
+  { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
+  { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
+];
 export const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -108,7 +123,7 @@ export const Contact = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground neon-glow" onClick={handleSubmit}
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground " onClick={handleSubmit}
                   >
                     Send Message
                   </Button>
@@ -151,6 +166,32 @@ export const Contact = () => {
             </div>
           </div>
         </div>
+        <div className="logo-loop-container mt-10">
+          {/* Basic horizontal loop */}
+            <LogoLoop
+              logos={techLogos}
+              speed={120}
+              direction="left"
+              logoHeight={48}
+              gap={40}
+              hoverSpeed={0}
+              scaleOnHover
+              fadeOut
+              fadeOutColor="black"
+              ariaLabel="Technology partners"
+            />
+          
+            {/* Vertical loop with deceleration on hover
+            <LogoLoop
+              logos={techLogos}
+              speed={80}
+              direction="up"
+              logoHeight={48}
+              gap={40}
+              hoverSpeed={20}
+              fadeOut
+            /> */}
+        </div>
 
         <div className="text-center mt-16 pt-8 border-t border-border">
           <p className="text-muted-foreground">
@@ -158,6 +199,7 @@ export const Contact = () => {
           </p>
         </div>
       </div>
+
     </section>
   );
 };

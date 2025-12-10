@@ -6,44 +6,38 @@
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
-  :root {
-    --background: 220 26% 8%;
-    --foreground: 210 40% 98%;
+:root {
+  --background: 222 10% 7%;
+  --foreground: 0 0% 96%;
 
-    --card: 220 26% 12%;
-    --card-foreground: 210 40% 98%;
+  --card: 222 12% 12%;
+  --card-foreground: 0 0% 96%;
 
-    --popover: 220 26% 12%;
-    --popover-foreground: 210 40% 98%;
+  --primary: 200 10% 60%;  /* neutral blue-grey */
+  --primary-foreground: 222 10% 7%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 26% 8%;
+  --secondary: 222 12% 15%;
+  --secondary-foreground: 0 0% 96%;
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
+  --accent: 210 15% 55%;
+  --accent-foreground: 222 10% 7%;
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+  --border: 222 12% 15%;
+  --ring: 210 15% 55%;
 
-    --accent: 217 91% 60%;
-    --accent-foreground: 220 26% 8%;
+  --dark-bg: 222 10% 7%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+  /* Neon */
+  --neon-blue: 215 85% 62%;
+  --neon-purple: 270 75% 70%;
+  --neon-pink: 325 80% 70%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 217 91% 60%;
+  /* --dark-bg: 222 20% 7%; */
+  --glass-bg: 222 20% 10%;
+}
 
-    --radius: 0.5rem;
 
-    /* Custom portfolio colors */
-    --neon-blue: 217 91% 60%;
-    --neon-purple: 271 91% 65%;
-    --neon-pink: 330 85% 70%;
-    --dark-bg: 220 26% 8%;
-    --glass-bg: 220 26% 12%;
-  }
+
 
   .dark {
     --background: 220 26% 8%;
@@ -189,4 +183,7 @@
 
 .particle {
   animation: particle-float 8s ease-in-out infinite;
+}
+canvas.particle-canvas {
+  background: hsl(var(--dark-bg)) !important;
 }

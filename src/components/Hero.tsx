@@ -4,17 +4,61 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import BlurText from "./BlurText";
 import ScrambledText from "./ScrambledText";
+import RotatingText from './RotatingText';
 
 const AnimatedSphere = () => {
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <mesh scale={2.4}>
         <sphereGeometry args={[1, 100, 200]} />
-        <meshStandardMaterial color="#3b82f6" roughness={0} />
+        <meshStandardMaterial
+          color="#d4d4d8"          // base
+          emissive="#4b5563"       // subtle neon glow
+          emissiveIntensity={0.45}
+          roughness={0.7}          // slight reflections
+          metalness={0.9}          // premium 3D look
+        />
       </mesh>
     </Float>
   );
 };
+const CrystalIcosahedron = () => {
+  return (
+    <Float speed={1.6} rotationIntensity={1.2} floatIntensity={2}>
+      <mesh scale={2.3}>
+        <icosahedronGeometry args={[1, 1]} />
+        <meshStandardMaterial
+          color="#8b5cf6"             // Purple core
+          emissive="#a78bfa"          // Bright glow
+          emissiveIntensity={0.45}
+          metalness={0.85}
+          roughness={0.25}
+        />
+      </mesh>
+    </Float>
+  );
+};
+const GlassSphere = () => {
+  return (
+    <Float speed={1.5} rotationIntensity={1} floatIntensity={1.8}>
+      <mesh scale={2.4}>
+        <sphereGeometry args={[1, 100, 100]} />
+        <meshPhysicalMaterial
+          transmission={1}           // full glass
+          thickness={0.5}
+          roughness={0.1}
+          metalness={0.05}
+          clearcoat={1}
+          clearcoatRoughness={0.1}
+          ior={1.45}                 // refractive index
+          attenuationColor="#93c5fd"  // soft blue tint
+          attenuationDistance={2}
+        />
+      </mesh>
+    </Float>
+  );
+};
+
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +77,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen mt-auto flex items-center justify-center relative pt-0 max-xs:mt-10px "
+      className="min-h-screen mt-auto flex items-center justify-center relative pt-0 max-xs:mt-10 "
     >
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
         {/* LEFT SIDE */}
@@ -43,14 +87,25 @@ export const Hero = () => {
           }`}
         >
           <div className="space-y-4">
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-xl lg:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
-                Still Learning,
+                Still <RotatingText
+                        texts={['Thinking', 'Learning', 'Contributing','Exploring']}
+                        mainClassName="flex px-2 md:px-3 bg-cyan-500 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-2xl"
+                        staggerFrom={"last"}
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        exit={{ y: "-120%" }}
+                        staggerDuration={0.025}
+                        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                        transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                        rotationInterval={2000}
+                      />
               </span>
-              <span className="block overflow-visible mt-2">
+              <span className="block overflow-visible">
                 <BlurText
                   text="Already Creating!"
-                  delay={150}
+                  delay={1}
                   animateBy="words"
                   direction="top"
                   className="text-4xl mb-4"
@@ -84,7 +139,7 @@ export const Hero = () => {
             <Button
               onClick={scrollToProjects}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground neon-glow"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground "
             >
               View My Work
             </Button>

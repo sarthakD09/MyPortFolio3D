@@ -3,14 +3,14 @@ import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 
 const skills = [
-  { name: "React/Next.js", level: 70, color: "bg-blue-500" },
-  { name: "TypeScript/javascript", level: 80, color: "bg-blue-400" },
+  { name: "Python for AIML & DS", level: 86, color: "bg-yellow-500" },
+  { name: "web-dev/hosting", level: 80, color: "bg-orange-500" },
   { name: "Node.js", level: 88, color: "bg-green-500" },
-  { name: "Three.js/WebGL", level: 40, color: "bg-purple-500" },
-  { name: "Python", level: 82, color: "bg-yellow-500" },
-  { name: "Java", level: 87, color: "bg-red-500" },
+  { name: "React/Next.js", level: 75, color: "bg-blue-500" },
   { name: "UI/UX Design", level: 80, color: "bg-pink-500" },
-  { name: "web-dev/hosting", level: 75, color: "bg-orange-500" },
+  { name: "TypeScript/javascript", level: 80, color: "bg-blue-400" },
+  { name: "Three.js/WebGL", level: 45, color: "bg-purple-500" },
+  { name: "Java", level: 70, color: "bg-red-500" },
 ];
 
 const technologies = [
@@ -111,7 +111,7 @@ export const Skills = () => {
             <div className="glass-card p-6 rounded-lg mt-8">
               <h4 className="text-lg font-bold mb-4 text-primary">What I Bring</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Full-stack development expertise</li>
+                <li>• Full-stack development & AI-Systems expertise</li>
                 <li>• Modern UI/UX design principles</li>
                 <li>• Performance optimization</li>
                 <li>• Clean, maintainable code</li>

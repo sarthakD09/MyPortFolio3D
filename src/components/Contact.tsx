@@ -195,7 +195,7 @@ export const Contact = () => {
 
         <div className="text-center mt-16 pt-8 border-t border-border">
           <p className="text-muted-foreground">
-            © 2025 Portfolio by Sarthak
+            © 2026 Portfolio by Sarthak
           </p>
         </div>
       </div>

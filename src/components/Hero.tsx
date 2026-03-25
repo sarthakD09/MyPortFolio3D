@@ -77,9 +77,9 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen mt-auto flex items-center justify-center relative pt-0 max-xs:mt-10 "
+      className="min-h-screen mt-auto pt-20 flex items-center justify-center relative pt-0 max-xs:mt-10 "
     >
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
+      <div className="max-w-full mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
         {/* LEFT SIDE */}
         <div
           className={`space-y-8 z-10 ${
@@ -126,11 +126,7 @@ export const Hero = () => {
                 speed={0.5}
                 scrambleChars=".:"
               >
-                A developer passionate about building web apps that make a
-                difference. <br />
-                I specialize in crafting beautiful, <br /> performant digital
-                experiences using 3D <br />visualization, clean UI/UX, and <br />
-                cutting-edge tech.
+                I’m an AIML and Full Stack Developer passionate about building intelligent systems and real-world applications. Currently working with LLMs, deep learning, and modern web technologies like Python, React, and Firebase.
               </ScrambledText>
             </p>
           </div>

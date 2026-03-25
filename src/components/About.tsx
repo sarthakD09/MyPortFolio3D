@@ -59,26 +59,21 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I'm an Electronics Engineering student with a passion for
-                software development. I love building things — whether it's a
-                chat app, automation tool, or a website like this one.
-              </p>
-              <p>
-                Currently exploring web development, Flutter, and AI projects.
-                Enjoy solving real-world problems through code. Inspired by
-                clean UI/UX, secure systems, and open-source contributions.
-                Outside coding, I enjoy chess, anime, and automating life tasks
-                just for fun.
+                I am an Electronics engineering student with a strong interest in Artificial Intelligence, Machine Learning, and Full Stack Development. I am currently exploring concepts like LLMs, Transformers, CNNs, and RNNs through hands-on projects.
+
+I aim to build intelligent systems, including custom AI models for stock analysis and smart assistants that solve real-world problems. Alongside this, I develop full stack applications using Python, React, Firebase, and Git.
+
+With certifications in Full Stack Development and Python, along with virtual internships, I am focused on creating clean, efficient, and impactful technology.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-3xl font-bold text-primary">10+</h3>
+                <h3 className="text-3xl font-bold text-primary">20+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </div>
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-3xl font-bold text-primary">2+</h3>
+                <h3 className="text-3xl font-bold text-primary">3+</h3>
                 <p className="text-muted-foreground">Years Experience</p>
               </div>
             </div>

@@ -14,6 +14,14 @@ const projects = [
     codeUrl: "https://github.com/sarthakD09/WittyChat.git",
   },
   {
+    title: "AI Camera Assistant",
+    description: "An intelligent AI-powered camera assistant that analyzes visual input in real-time and provides meaningful insights using advanced computer vision and AI models.",
+    image: "/ai_cam_assistant.png",
+    technologies: ["React", "python", "OpenCV", "TensorFlow","Deep Learning Models"],
+    demoUrl: "https://ai-cam-app.vercel.app/",
+    codeUrl: "https://github.com/sarthakD09/AI_Cam_assistant.git",
+  },
+  {
     title: "3D Portfolio Website",
     description: "Interactive portfolio featuring Three.js animations and immersive 3D experiences.",
     image: "/3d_portfolio.png",
